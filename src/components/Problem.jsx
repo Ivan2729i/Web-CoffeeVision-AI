@@ -4,11 +4,27 @@ import Card from "./Card";
 
 function Problem() {
   return (
-    <Section id="problema" title="El problema" subtitle="La inspección tradicional del café verde depende de la experiencia visual del evaluador.">
+    <Section
+      id="problema"
+      title="El reto en la evaluación del café verde"
+      subtitle="La inspección manual sigue siendo importante, pero puede presentar variaciones cuando se analizan muestras grandes o repetitivas."
+    >
       <div className="grid gap-6 md:grid-cols-3">
-        <Card icon={AlertTriangle} title="Variación humana" text="Los resultados pueden cambiar dependiendo del evaluador, el cansancio o la experiencia." />
-        <Card icon={Clock} title="Proceso lento" text="Analizar muestras manualmente consume tiempo y puede retrasar decisiones de calidad." />
-        <Card icon={FileWarning} title="Poca trazabilidad" text="Sin registros digitales, comparar lotes y generar reportes se vuelve complicado." />
+        <Card
+          icon={AlertTriangle}
+          title="Criterio variable"
+          text="La clasificación puede cambiar según la experiencia, concentración o fatiga del evaluador."
+        />
+        <Card
+          icon={Clock}
+          title="Proceso lento"
+          text="La revisión manual de defectos puede consumir tiempo y retrasar decisiones sobre el lote."
+        />
+        <Card
+          icon={FileWarning}
+          title="Registro limitado"
+          text="Sin evidencia digital, comparar evaluaciones y generar reportes se vuelve más complicado."
+        />
       </div>
     </Section>
   );

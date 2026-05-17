@@ -1,18 +1,34 @@
-import { Zap, ShieldCheck, ClipboardList, TrendingUp } from "lucide-react";
 import Section from "./Section";
-import Card from "./Card";
+
+const benefits = [
+  ["01", "Más rapidez", "Reduce el tiempo de revisión de muestras."],
+  ["02", "Mayor consistencia", "Apoya evaluaciones más uniformes entre lotes."],
+  ["03", "Trazabilidad", "Guarda resultados digitales y evidencia del análisis."],
+  ["04", "Mejor toma de decisiones", "Ayuda a clasificar lotes con información clara."],
+];
 
 function Benefits() {
   return (
     <Section
-      title="Beneficios"
-      subtitle="CoffeeVision AI está diseñado para complementar el trabajo humano y hacer más confiable el control de calidad."
+      title="Beneficios del sistema"
+      subtitle="Una herramienta diseñada para complementar al evaluador humano y fortalecer el control de calidad."
     >
-      <div className="grid gap-6 md:grid-cols-4">
-        <Card icon={Zap} title="Rapidez" text="Reduce el tiempo necesario para evaluar una muestra." />
-        <Card icon={ShieldCheck} title="Consistencia" text="Apoya resultados más uniformes entre diferentes evaluaciones." />
-        <Card icon={ClipboardList} title="Trazabilidad" text="Guarda resultados digitales para consultar y comparar lotes." />
-        <Card icon={TrendingUp} title="Escalabilidad" text="Puede crecer hacia más módulos, sensores y procesos agroindustriales." />
+      <div className="grid gap-5 md:grid-cols-2">
+        {benefits.map(([num, title, text]) => (
+          <div
+            key={title}
+            className="group flex gap-5 rounded-[2rem] border border-[#eadfd6] bg-white p-6 shadow-[0_18px_50px_rgba(67,38,22,0.08)] transition hover:-translate-y-1"
+          >
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#2b170f] font-black text-[#f5d38d]">
+              {num}
+            </div>
+
+            <div>
+              <h3 className="text-xl font-black text-[#2b170f]">{title}</h3>
+              <p className="mt-2 leading-7 text-[#6b5a4f]">{text}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </Section>
   );
