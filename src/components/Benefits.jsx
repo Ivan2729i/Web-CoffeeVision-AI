@@ -1,10 +1,28 @@
+import { motion } from "framer-motion";
+import { Zap, ShieldCheck, ClipboardList, TrendingUp } from "lucide-react";
 import Section from "./Section";
 
 const benefits = [
-  ["01", "Más rapidez", "Reduce el tiempo de revisión de muestras."],
-  ["02", "Mayor consistencia", "Apoya evaluaciones más uniformes entre lotes."],
-  ["03", "Trazabilidad", "Guarda resultados digitales y evidencia del análisis."],
-  ["04", "Mejor toma de decisiones", "Ayuda a clasificar lotes con información clara."],
+  {
+    icon: Zap,
+    title: "Más rapidez",
+    text: "Reduce el tiempo de revisión de muestras y agiliza decisiones sobre el lote.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Mayor consistencia",
+    text: "Apoya evaluaciones más uniformes al reducir variaciones entre revisiones.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Trazabilidad",
+    text: "Guarda resultados digitales y evidencia para consultar evaluaciones anteriores.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Mejor decisión",
+    text: "Presenta datos claros para clasificar lotes y respaldar el control de calidad.",
+  },
 ];
 
 function Benefits() {
@@ -13,24 +31,40 @@ function Benefits() {
       title="Beneficios del sistema"
       subtitle="Una herramienta diseñada para complementar al evaluador humano y fortalecer el control de calidad."
     >
-      <div className="grid gap-5 md:grid-cols-2">
-        {benefits.map(([num, title, text]) => (
-          <div
-            key={title}
-            className="group flex gap-5 rounded-[2rem] border border-[#eadfd6] bg-white p-6 shadow-[0_18px_50px_rgba(67,38,22,0.08)] transition hover:-translate-y-1"
-          >
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#2b170f] font-black text-[#f5d38d]">
-              {num}
-            </div>
-
-            <div>
-              <h3 className="text-xl font-black text-[#2b170f]">{title}</h3>
-              <p className="mt-2 leading-7 text-[#6b5a4f]">{text}</p>
-            </div>
-          </div>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {benefits.map((item, index) => (
+          <BenefitCard key={item.title} {...item} index={index} />
         ))}
       </div>
     </Section>
+  );
+}
+
+function BenefitCard({ icon: Icon, title, text, index }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 35, scale: 0.96 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      whileHover={{ y: -8, scale: 1.025 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: index * 0.08 }}
+      className="group relative overflow-hidden rounded-[2rem] border border-[#eadfd6] bg-white p-6 shadow-[0_18px_50px_rgba(67,38,22,0.08)]"
+    >
+      <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#d6a85f]/20 blur-2xl transition group-hover:bg-[#d6a85f]/35" />
+
+      <motion.div
+        animate={{ y: [0, -4, 0] }}
+        transition={{ duration: 2.2, repeat: Infinity, delay: index * 0.15 }}
+        className="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2b170f] to-[#8b4e24] text-[#f5d38d] shadow-lg"
+      >
+        <Icon size={26} />
+      </motion.div>
+
+      <h3 className="relative text-xl font-black text-[#2b170f]">{title}</h3>
+      <p className="relative mt-3 leading-7 text-[#6b5a4f]">{text}</p>
+
+      <div className="relative mt-6 h-1 w-14 rounded-full bg-gradient-to-r from-[#8b4e24] to-[#d6a85f] transition-all duration-300 group-hover:w-28" />
+    </motion.div>
   );
 }
 
