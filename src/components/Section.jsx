@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-function Section({ id, title, subtitle, children }) {
+function Section({ id, eyebrow = "CoffeeVision AI", title, subtitle, children }) {
   return (
     <section id={id} className="relative px-6 py-28">
       <div className="absolute inset-0 -z-10 bg-[#fbf7f2]" />
@@ -13,9 +13,11 @@ function Section({ id, title, subtitle, children }) {
           viewport={{ once: true }}
           className="mb-14 max-w-3xl"
         >
-          <p className="mb-4 text-sm font-black uppercase tracking-[0.35em] text-[#8b4e24]">
-            CoffeeVision AI
-          </p>
+          {eyebrow && (
+            <p className="mb-4 text-sm font-black uppercase tracking-[0.35em] text-[#8b4e24]">
+              {eyebrow}
+            </p>
+          )}
 
           <h2 className="text-4xl font-black tracking-[-0.04em] text-[#2b170f] md:text-6xl">
             {title}

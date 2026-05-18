@@ -28,6 +28,7 @@ const benefits = [
 function Benefits() {
   return (
     <Section
+      eyebrow="Impacto"
       title="Beneficios del sistema"
       subtitle="Una herramienta diseñada para complementar al evaluador humano y fortalecer el control de calidad."
     >

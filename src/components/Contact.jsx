@@ -26,7 +26,7 @@ function Contact() {
         </h2>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#d8c3b3]">
-          Un sistema que integra prototipo físico, visión artificial y dashboard
+          Un sistema que integra componentes físicos, visión e inteligencia artificial y un dashboard
           web para apoyar el control de calidad del café verde.
         </p>
 
@@ -35,7 +35,7 @@ function Contact() {
             Contactar por WhatsApp
           </ContactButton>
 
-          <ContactButton href="#proceso">Ver funcionamiento</ContactButton>
+          <ContactButton href="#proceso">Descubrir Funcionamiento</ContactButton>
 
           <ContactButton href="#software">Ver plataforma</ContactButton>
         </div>

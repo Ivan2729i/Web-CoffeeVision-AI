@@ -6,8 +6,9 @@ function Hardware() {
   return (
     <Section
       id="hardware"
+      eyebrow="Componentes"
       title="Hardware del sistema"
-      subtitle="El prototipo guía la muestra de café verde de forma ordenada para facilitar la captura y análisis de cada grano."
+      subtitle="El sistema guía la muestra de café verde de forma ordenada para facilitar la captura y análisis de cada grano mediante nuestros servidores de alto desempeño."
     >
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <motion.div
@@ -22,7 +23,7 @@ function Hardware() {
           <div className="relative overflow-hidden rounded-[1.5rem]">
             <img
               src={prototipo}
-              alt="Prototipo físico CoffeeVision AI"
+              alt="Componente físico CoffeeVision AI"
               className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]"
             />
 
@@ -30,7 +31,7 @@ function Hardware() {
 
             <div className="absolute bottom-5 left-5 right-5 rounded-3xl border border-white/10 bg-black/35 p-5 text-white backdrop-blur-xl">
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f5d38d]">
-                Prototipo físico
+                Componente Físico
               </p>
               <h3 className="mt-2 text-2xl font-black">
                 Flujo controlado para inspección visual
@@ -53,12 +54,12 @@ function Hardware() {
           <HardwareItem
             number="03"
             title="Zona de captura"
-            text="Las cámaras registran imágenes para alimentar el modelo de IA."
+            text="Las cámaras registran imágenes y se mandan al servidor para alimentar el modelo de IA."
           />
           <HardwareItem
             number="04"
             title="Control electrónico"
-            text="La electrónica coordina el movimiento y el flujo del prototipo."
+            text="La electrónica coordina el movimiento y el flujo del sistema."
           />
         </div>
       </div>
