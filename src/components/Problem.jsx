@@ -11,7 +11,7 @@ const problems = [
   {
     icon: Clock,
     title: "Proceso lento",
-    text: "La revisión manual de defectos puede consumir tiempo y retrasar decisiones sobre el lote.",
+    text: "La revisión manual de defectos puede consumir mucho tiempo y retrasar decisiones sobre el lote.",
   },
   {
     icon: FileWarning,
@@ -24,8 +24,9 @@ function Problem() {
   return (
     <Section
       id="problema"
+      eyebrow="Problemática"
       title="El reto en la evaluación del café verde"
-      subtitle="La inspección manual sigue siendo importante, pero puede presentar variaciones cuando se analizan muestras grandes o repetitivas."
+      subtitle="La inspección tradicional sigue siendo valiosa, pero mantener la consistencia se vuelve un desafío crítico en análisis masivos. Ahí es donde la automatización transforma el flujo, optimizando el proceso."
     >
       <div className="grid gap-5 md:grid-cols-3">
         {problems.map((item, index) => (

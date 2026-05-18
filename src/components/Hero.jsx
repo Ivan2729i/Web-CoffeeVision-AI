@@ -50,7 +50,7 @@ function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <HeroButton href="#proceso" primary>
-              Ver cómo funciona
+              Descubre cómo funciona
             </HeroButton>
 
             <HeroButton href="#software">

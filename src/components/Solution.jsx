@@ -5,8 +5,8 @@ import Section from "./Section";
 const solutions = [
   {
     icon: ScanLine,
-    title: "Captura guiada",
-    text: "El prototipo controla el paso del café para facilitar una inspección visual más ordenada.",
+    title: "Captura Guiada",
+    text: "El sistema controla el paso del café para facilitar una inspección visual más ordenada.",
   },
   {
     icon: Brain,
@@ -15,7 +15,7 @@ const solutions = [
   },
   {
     icon: LayoutDashboard,
-    title: "Dashboard web",
+    title: "Dashboard Web",
     text: "La plataforma muestra resultados, métricas y reportes para documentar cada evaluación.",
   },
 ];
@@ -24,6 +24,7 @@ function Solution() {
   return (
     <Section
       id="solucion"
+      eyebrow="Nuestra Propuesta"
       title="Una solución que une hardware, IA y software"
       subtitle="CoffeeVision AI apoya al evaluador con un flujo digital que detecta defectos, clasifica lotes y genera información útil para la toma de decisiones."
     >

@@ -7,6 +7,7 @@ function Software() {
   return (
     <Section
       id="software"
+      eyebrow="Procesamiento"
       title="Software e inteligencia artificial"
       subtitle="La plataforma centraliza detección, clasificación, métricas y reportes del proceso de calidad."
     >
@@ -14,15 +15,15 @@ function Software() {
         <Feature
           className="lg:col-start-1 lg:row-start-1"
           icon={Brain}
-          title="Modelo de visión artificial"
-          text="Detecta defectos en granos de café verde mediante IA."
+          title="Modelo de visión e inteligencia artificial"
+          text="Detecta defectos en granos de café verde mediante IA en cuestión de segundos."
         />
 
         <Feature
           className="lg:col-start-1 lg:row-start-2"
           icon={Boxes}
-          title="Gestión de lotes"
-          text="Registra proveedores, muestras y evaluaciones realizadas."
+          title="Gestión de Información"
+          text="Registra proveedores, lotes y evaluaciones realizadas."
         />
 
         <Feature
@@ -62,7 +63,7 @@ function DashboardMockup() {
           <span className="h-3 w-3 rounded-full bg-yellow-300" />
           <span className="h-3 w-3 rounded-full bg-green-400" />
           <span className="ml-3 truncate rounded-full bg-black/25 px-4 py-1 text-xs text-[#d8c3b3]">
-            coffeevision.ai/dashboard
+            coffeevision-ai/dashboard
           </span>
         </div>
 

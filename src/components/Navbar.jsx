@@ -177,7 +177,7 @@ function Navbar() {
                   CoffeeVision AI
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[#d8c3b3]">
-                  IA, hardware y dashboard para el análisis de café verde.
+                  IA, hardware y dashboard para el análisis inteligente del café verde.
                 </p>
               </motion.div>
             </motion.aside>

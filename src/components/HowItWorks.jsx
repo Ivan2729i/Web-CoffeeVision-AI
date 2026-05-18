@@ -5,7 +5,7 @@ const steps = [
   {
     icon: PackageOpen,
     num: "01",
-    title: "Tolva 3D",
+    title: "Tolva Especializada",
     text: "La muestra de 350g ingresa al sistema.",
   },
   {
@@ -23,14 +23,14 @@ const steps = [
   {
     icon: Brain,
     num: "04",
-    title: "IA",
-    text: "El modelo detecta defectos primarios y secundarios.",
+    title: "Modelo de IA",
+    text: "El modelo detecta defectos primarios y secundarios en los granos de café verde.",
   },
   {
     icon: FileText,
     num: "05",
     title: "Reporte",
-    text: "El dashboard genera resultados y evidencia digital.",
+    text: "El dashboard genera resultados y evidencia digital trazable.",
   },
 ];
 
